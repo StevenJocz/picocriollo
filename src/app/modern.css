@@ -1,0 +1,161 @@
+/* Capa «moderna» de Pico Criollo (dirección en PRODUCT.md y DESIGN.md).
+   Blanco limpio, cristal con degradados pastel (menta, cielo, lila, durazno) y movimiento medido:
+   las pantallas que se usan decenas de veces al día solo animan retroalimentación y continuidad;
+   la entrada tiene su único momento de autor. Se carga después de theme.css.
+   Para revertirla basta quitar este archivo y su import en layout.tsx. */
+
+:root {
+  --ink: #0d1f16; --muted: #566b5f; --green: #2c8c58; --green-dark: #123a25;
+  --mint: #bfeed6; --sky: #bfe0f6; --lilac: #d8cffa; --peach: #fde2d2;
+  --line: rgba(13, 31, 22, .07);
+  --glass: rgba(255, 255, 255, .66); --glass-strong: rgba(255, 255, 255, .92); --glass-line: rgba(255, 255, 255, .96);
+  --shadow: 0 1px 2px rgba(13, 31, 22, .04), 0 14px 34px -12px rgba(13, 31, 22, .16);
+  --shadow-lift: 0 2px 4px rgba(13, 31, 22, .05), 0 24px 46px -14px rgba(13, 31, 22, .26);
+  --grad: linear-gradient(135deg, #123a25 0%, #2a8052 56%, #52b784 100%);
+  --r-lg: 32px; --r-md: 24px; --r-sm: 16px;
+  /* Curvas de salida fuertes: el movimiento arranca rápido y la pantalla responde al instante. Sin ease-in ni rebotes. */
+  --ease-out: cubic-bezier(.23, 1, .32, 1); --ease-in-out: cubic-bezier(.77, 0, .175, 1); --ease-drawer: cubic-bezier(.32, .72, 0, 1);
+}
+
+html body { background: #f6faf8; }
+/* Fondo vivo: el único movimiento ambiental. Pastel, lento y sin tocar el contenido. */
+body::before {
+  background:
+    radial-gradient(38vmax 38vmax at 16% 10%, rgba(191, 238, 214, .85), transparent 66%),
+    radial-gradient(34vmax 34vmax at 90% 14%, rgba(191, 224, 246, .8), transparent 64%),
+    radial-gradient(40vmax 40vmax at 74% 92%, rgba(216, 207, 250, .75), transparent 66%),
+    radial-gradient(30vmax 30vmax at 6% 86%, rgba(253, 226, 210, .75), transparent 64%);
+}
+
+/* ---------- Lo que dibuja el navegador, con la paleta ---------- */
+::selection { background: rgba(44, 140, 88, .24); color: var(--ink); }
+html { accent-color: var(--green); scrollbar-color: rgba(18, 58, 37, .28) transparent; }
+body input, body textarea, body select { caret-color: var(--green); }
+body ::placeholder { color: #5f7468; opacity: 1; }
+body :is(h1, h2, h3) { text-wrap: balance; }
+body :is(.metric-value, .hatch-clock b, .stock-row strong, .chart-total strong) { font-variant-numeric: tabular-nums; }
+body a:not([class]) { text-underline-offset: 3px; text-decoration-thickness: 1px; }
+
+/* ---------- Superficies: cristal limpio; al pasar el cursor solo cambia la sombra ---------- */
+body :is(.panel, .metric-card, .stock-item-card, .market-card, .post-card, .op-card, .settings-card, .profile-card, .module-summary, .records-panel, .report-panel, .seller-head, .auction-box, .recent-card, .quick-tile) {
+  border-color: var(--glass-line); box-shadow: var(--shadow);
+  transition: box-shadow 200ms var(--ease-out), transform 160ms var(--ease-out);
+}
+@media (hover: hover) and (pointer: fine) {
+  body :is(.metric-card, .market-card, .recent-card, .quick-tile, .op-card):hover { transform: none; box-shadow: var(--shadow-lift); }
+}
+body :is(.recent-card, .quick-tile, .market-card, .op-card):active { transform: scale(.97); }
+
+/* Entrada de tarjetas al abrir una pantalla: corta y discreta (se ve decenas de veces al día). */
+@keyframes rise { from { opacity: 0; transform: translateY(8px); } }
+body .content-area :is(.panel, .metric-card, .market-card, .post-card, .op-card, .recent-card, .quick-tile, .stock-item-card, .settings-card, .home-feature, .home-search, .hatch-banner) {
+  animation: rise 280ms var(--ease-out) backwards; animation-delay: calc(var(--i, 0) * 30ms);
+}
+body .content-area :is(.panel, .metric-card, .market-card, .post-card, .op-card, .recent-card, .quick-tile, .stock-item-card, .settings-card):nth-child(n+5) { --i: 4; }
+body .hatch-banner { --i: 3; }
+
+/* ---------- Botones ---------- */
+body .btn-primary, body .welcome-cta { transition: transform 160ms var(--ease-out), box-shadow 200ms var(--ease-out), filter 160ms var(--ease-out); }
+@media (hover: hover) and (pointer: fine) {
+  body .btn-primary:hover { filter: brightness(1.08); box-shadow: 0 14px 30px -8px rgba(23, 64, 42, .45); }
+}
+body .btn-secondary { transition: transform 160ms var(--ease-out), background-color 160ms, box-shadow 200ms var(--ease-out); }
+
+/* ---------- Campos ---------- */
+body .form-field input, body .form-field select, body .form-field textarea { transition: border-color 150ms, box-shadow 200ms var(--ease-out), background-color 150ms; }
+body .form-field input:focus, body .form-field select:focus, body .form-field textarea:focus { border-color: var(--green); box-shadow: 0 0 0 4px rgba(44, 140, 88, .16); }
+body .home-search { transition: box-shadow 200ms var(--ease-out); }
+body .home-search:focus-within { box-shadow: 0 0 0 4px rgba(44, 140, 88, .14), 0 14px 30px -10px rgba(13, 31, 22, .22); }
+
+/* ---------- Inicio: categorías deslizables (estructura de la tienda móvil de referencia) ---------- */
+body .mini-heading { display: flex; align-items: baseline; justify-content: space-between; gap: 12px; margin: 4px 2px -6px; }
+body .mini-heading h2 { margin: 0; font-size: 18px; }
+body .mini-heading span { color: var(--muted); font-size: 13px; }
+body .quick-grid {
+  grid-template-columns: none; grid-auto-flow: column; grid-auto-columns: minmax(104px, 1fr);
+  overflow-x: auto; overscroll-behavior-x: contain; scroll-snap-type: x proximity; scrollbar-width: none;
+  margin-inline: -4px; padding: 6px 4px 14px;
+}
+body .quick-grid::-webkit-scrollbar { display: none; }
+/* En teléfono el tema las pone en fila de 62 px; en la tira vuelven a ser tarjetas verticales. */
+body .quick-tile {
+  scroll-snap-align: start; display: grid; justify-items: center; align-content: center; gap: 8px; aspect-ratio: auto; height: auto; min-height: 104px; padding: 12px 6px;
+  font: 700 13px/1.15 Manrope, sans-serif; text-align: center;
+}
+
+/* ---------- Inicio: banner con cuenta regresiva (urgencia real: la eclosión no espera) ---------- */
+body .hatch-banner {
+  display: grid; grid-template-columns: auto minmax(0, 1fr); align-items: center; gap: 12px 14px; margin: 18px 0 4px; padding: 16px 18px;
+  border-radius: var(--r-md); border: 1px solid var(--glass-line);
+  background: linear-gradient(110deg, rgba(255, 255, 255, .94) 0%, rgba(191, 238, 214, .62) 52%, rgba(191, 224, 246, .6) 100%);
+  box-shadow: var(--shadow);
+}
+body .hatch-banner-icon { width: 52px; height: 52px; display: grid; place-items: center; border-radius: 18px; color: #fff; background: var(--grad); box-shadow: 0 10px 22px -8px rgba(23, 64, 42, .45); }
+body .hatch-banner-copy { display: grid; gap: 2px; min-width: 0; }
+body .hatch-banner-copy strong { font: 800 17px Manrope, sans-serif; letter-spacing: -.02em; }
+body .hatch-banner-copy span { color: var(--muted); font-size: 13px; line-height: 1.4; }
+body .hatch-clock { grid-column: 1 / -1; display: flex; gap: 8px; }
+body .hatch-clock span { display: grid; justify-items: center; gap: 1px; min-width: 56px; padding: 8px 6px 6px; border-radius: 14px; color: #fff; background: #12261b; }
+body .hatch-clock b { font: 800 20px Manrope, sans-serif; line-height: 1.1; }
+body .hatch-clock small { font-size: 12px; letter-spacing: .08em; color: rgba(255, 255, 255, .78); }
+body .btn-banner { grid-column: 1 / -1; min-height: 46px; padding: 0 22px; border: 0; border-radius: 999px; color: #fff; background: #12261b; font: 700 14px Manrope, sans-serif; cursor: pointer; transition: transform 160ms var(--ease-out), box-shadow 200ms var(--ease-out); }
+@media (hover: hover) and (pointer: fine) { body .btn-banner:hover { box-shadow: 0 12px 26px -10px rgba(18, 38, 27, .6); } }
+body .btn-banner:active { transform: scale(.97); }
+@media (min-width: 700px) {
+  body .hatch-banner { grid-template-columns: auto minmax(0, 1fr) auto auto; }
+  body .hatch-clock, body .btn-banner { grid-column: auto; }
+}
+
+/* ---------- Barra inferior flotante ---------- */
+.m-dock { background: rgba(255, 255, 255, .76); border-color: rgba(255, 255, 255, .95); box-shadow: 0 20px 46px -14px rgba(13, 31, 22, .34); }
+.m-dock-item { transition: flex-grow 280ms var(--ease-drawer), background-color 200ms var(--ease-out), color 160ms, box-shadow 200ms var(--ease-out), transform 160ms var(--ease-out); }
+.m-dock-item:not(.is-active):active { transform: scale(.92); }
+
+/* ---------- Entrada: el momento de autor de la app ---------- */
+body .auth-screen, body .auth-screen .auth-bg { overflow: hidden; overflow: clip; }
+body .auth-screen .auth-bg i { border-radius: 50%; filter: blur(8px); opacity: .95; background: radial-gradient(circle at 32% 30%, #fff 0, var(--mint) 38%, rgba(191, 238, 214, 0) 72%); animation: none; }
+body .auth-screen .auth-bg i:nth-child(2) { background: radial-gradient(circle at 32% 30%, #fff 0, var(--sky) 38%, rgba(191, 224, 246, 0) 72%); }
+body .auth-screen .auth-bg i:nth-child(3) { background: radial-gradient(circle at 32% 30%, #fff 0, var(--lilac) 38%, rgba(216, 207, 250, 0) 72%); }
+body .auth-screen .auth-bg i:nth-child(4) { background: radial-gradient(circle at 32% 30%, #fff 0, var(--peach) 38%, rgba(253, 226, 210, 0) 72%); }
+
+/* Titular en tres líneas que entran una tras otra, la foto sube detrás y el botón cierra la secuencia. */
+@keyframes pc-line { from { opacity: 0; transform: translateY(14px); filter: blur(4px); } }
+@keyframes pc-art { from { opacity: 0; transform: translateY(24px) scale(.96); } }
+@keyframes pc-fade-up { from { opacity: 0; transform: translateY(10px); } }
+body .auth-headline > span, body .auth-headline > em { display: block; animation: pc-line 480ms var(--ease-out) backwards; }
+body .auth-headline > span:nth-child(2) { animation-delay: 70ms; }
+body .auth-headline > em { animation-delay: 140ms; font-style: normal; color: var(--green); }
+body .auth-lead { animation: pc-fade-up 400ms var(--ease-out) 200ms backwards; }
+body .auth-art { animation: pc-art 640ms var(--ease-drawer) 120ms backwards; }
+body .auth-actions { animation: pc-fade-up 400ms var(--ease-out) 280ms backwards; }
+body .auth-card { background: rgba(255, 255, 255, .78); -webkit-backdrop-filter: blur(28px) saturate(1.5); backdrop-filter: blur(28px) saturate(1.5); border: 1px solid rgba(255, 255, 255, .96); box-shadow: var(--shadow-lift); animation: pc-fade-up 300ms var(--ease-out) backwards; }
+body .auth-start { transition: transform 160ms var(--ease-out), box-shadow 200ms var(--ease-out); }
+@media (hover: hover) and (pointer: fine) { body .auth-start:hover { box-shadow: 0 18px 36px -12px rgba(23, 64, 42, .5); } }
+body .auth-start i { transition: transform 200ms var(--ease-out); }
+@media (hover: hover) and (pointer: fine) { body .auth-start:hover i { transform: translateX(3px); } }
+
+body .auth-forgot { display: block; width: fit-content; margin: -4px 0 12px auto; padding: 10px 2px; border: 0; background: none; color: var(--green-dark); font: 700 13px Manrope, sans-serif; cursor: pointer; text-decoration: underline; text-decoration-thickness: 1px; text-underline-offset: 3px; }
+body .auth-notice { display: flex; align-items: flex-start; gap: 8px; margin: 4px 0 12px; padding: 12px 14px; border-radius: 14px; border: 1px solid rgba(44, 140, 88, .22); background: #eaf8ef; color: #17402a; font-size: 14px; line-height: 1.45; animation: pc-fade-up 240ms var(--ease-out) backwards; }
+body .auth-notice svg { flex: none; margin-top: 1px; color: var(--green); }
+body .auth-show { display: flex; align-items: center; gap: 8px; min-height: 44px; margin: 0 0 8px; color: var(--muted); font-size: 14px; cursor: pointer; }
+body .auth-link { text-decoration: none; }
+body .auth-status { width: 64px; height: 64px; display: grid; place-items: center; margin-bottom: 10px; border-radius: 22px; animation: pc-pop 300ms var(--ease-out) backwards; }
+body .auth-status.is-ok { color: #1f6b3f; background: linear-gradient(145deg, #eaf8ef, #bfeed6); }
+body .auth-status.is-bad { color: #a2453a; background: linear-gradient(145deg, #fff1ee, #fdd5cc); }
+@keyframes pc-pop { from { opacity: 0; transform: scale(.9); } }
+body .auth-wait { display: flex; gap: 6px; margin: 18px 0 8px; }
+body .auth-wait i { width: 10px; height: 10px; border-radius: 50%; background: var(--green); animation: pc-bounce 900ms var(--ease-in-out) infinite; }
+body .auth-wait i:nth-child(2) { animation-delay: 120ms; } body .auth-wait i:nth-child(3) { animation-delay: 240ms; }
+@keyframes pc-bounce { 0%, 80%, 100% { transform: scale(.7); opacity: .5; } 40% { transform: scale(1); opacity: 1; } }
+body .auth-reset { display: grid; place-items: center; padding: 24px 16px; }
+body .auth-reset .auth-card .auth-brand { display: flex; margin-bottom: 14px; }
+
+/* Movimiento reducido: menos y más suave, no cero. Se conservan los fundidos que explican un cambio. */
+@media (prefers-reduced-motion: reduce) {
+  @keyframes pc-fade { from { opacity: 0; } }
+  body::before { animation: none; }
+  body .content-area :is(.panel, .metric-card, .market-card, .post-card, .op-card, .recent-card, .quick-tile, .stock-item-card, .settings-card, .home-feature, .home-search, .hatch-banner),
+  body :is(.auth-headline > span, .auth-headline > em, .auth-lead, .auth-art, .auth-actions, .auth-card, .auth-notice, .auth-status) { animation: pc-fade 200ms linear backwards; animation-delay: 0ms; }
+  body .auth-wait i { animation: none; }
+  body :is(.recent-card, .quick-tile, .market-card, .op-card):active, body .m-dock-item:active, body .btn-banner:active { transform: none; }
+}

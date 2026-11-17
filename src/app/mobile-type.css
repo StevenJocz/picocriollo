@@ -1,0 +1,502 @@
+/* Generado por scripts/gen-mobile-type.ts desde los CSS de src/. No editar a mano (npm run css:mobile).
+   Móvil: ningún texto por debajo de ~11.5 px. Escritorio: se levanta lo que queda por debajo de 12 px. El orden entre tamaños se conserva. */
+@media (max-width: 900px) {
+  body .brand small { font-size: 13px; }
+  body .farm-monogram { font-size: 14px; }
+  body .farm-switch strong { font-size: 14px; }
+  body .farm-switch small { font-size: 13px; }
+  body .nav-heading { font-size: 12.5px; }
+  body .nav-item { font-size: 14px; }
+  body .nav-count { font-size: 13px; }
+  body .help-card strong { font-size: 13.5px; }
+  body .help-card p { font-size: 13px; }
+  body .profile-avatar { font-size: 13px; }
+  body .top-avatar { font-size: 13px; }
+  body .profile-row strong { font-size: 13.5px; }
+  body .profile-row small { font-size: 12.5px; }
+  body .topbar-crumb { font-size: 13.5px; }
+  body .local-badge { font-size: 13px; }
+  body .topbar-date { font-size: 13.5px; }
+  body .app-footer { font-size: 12px; }
+  body .eyebrow { font-size: 12px; }
+  body .welcome p { font-size: 13px; }
+  body .welcome-cta { font-size: 13.5px; }
+  body .demo-tag { font-size: 12px; }
+  body .metric-label { font-size: 12.5px; }
+  body .metric-detail { font-size: 11.8px; }
+  body .panel-heading h3 { font-size: 14.5px; }
+  body .text-link { font-size: 13px; }
+  body .round-link { font-size: 13px; }
+  body .chart-total span { font-size: 12.5px; }
+  body .bar-column span { font-size: 12px; }
+  body .chart-legend { font-size: 12.5px; }
+  body .flock-total>span { font-size: 13px; }
+  body .avatar-stack span { font-size: 15.5px; }
+  body .race-row { font-size: 13px; }
+  body .incubation-copy>strong { font-size: 13.5px; }
+  body .incubation-copy>span { font-size: 12.5px; }
+  body .incubation-copy small { font-size: 12px; }
+  body .hatch-date span { font-size: 11.5px; }
+  body .hatch-date small { font-size: 12px; }
+  body .hatch-date strong { font-size: 14px; }
+  body .hatch-note { font-size: 12.5px; }
+  body .stock-copy strong { font-size: 13px; }
+  body .stock-copy span { font-size: 12.5px; }
+  body .stock-status { font-size: 12px; }
+  body .task-date strong { font-size: 15px; }
+  body .task-date span { font-size: 11.5px; }
+  body .task-copy strong { font-size: 13px; }
+  body .task-copy span { font-size: 12px; }
+  body .status-pill { font-size: 12px; }
+  body .alert-row p strong { font-size: 12.5px; }
+  body .alert-row p span { font-size: 12px; }
+  body .empty-inline { font-size: 13px; }
+  body .breadcrumb { font-size: 13px; }
+  body .module-title-row p { font-size: 12.5px; }
+  body .btn-primary { font-size: 13px; }
+  body .btn-secondary { font-size: 13px; }
+  body .module-summary>div:nth-child(2)>span { font-size: 12.5px; }
+  body .summary-aside span { font-size: 12px; }
+  body .summary-aside strong { font-size: 13.5px; }
+  body .search-box input { font-size: 13px; }
+  body .toolbar-filters select { font-size: 12px; }
+  body .filter-button { font-size: 12px; }
+  body th { font-size: 12px; }
+  body td { font-size: 12.5px; }
+  body .cell-title { font-size: 13px; }
+  body .code-text { font-size: 12.5px; }
+  body .bird-cell img { font-size: 15.5px; }
+  body .bird-avatar { font-size: 15.5px; }
+  body .complete-action { font-size: 12px; }
+  body .table-footer { font-size: 11.5px; }
+  body .empty-state h3 { font-size: 15px; }
+  body .empty-state p { font-size: 13px; }
+  body .stock-item-card>div:nth-child(2)>span { font-size: 12px; }
+  body .stock-item-card small { font-size: 12px; }
+  body .stock-item-card>div:nth-child(2)>strong { font-size: 13px; }
+  body .stock-amount span { font-size: 12px; }
+  body .inc-wide-main h3 { font-size: 14.5px; }
+  body .inc-wide-main>div:first-child>span:last-child { font-size: 12.5px; }
+  body .inc-progress>span { font-size: 12px; }
+  body .genealogy-tree { font-size: 12px; }
+  body .genealogy-banner p { font-size: 12px; }
+  body .form-field { font-size: 12.5px; }
+  body .form-field input { font-size: 13px; }
+  body .form-field select { font-size: 13px; }
+  body .form-field textarea { font-size: 13px; }
+  body .settings-label input { font-size: 13px; }
+  body .form-hint { font-size: 12.5px; }
+  body .form-error { font-size: 12.5px; }
+  body .settings-card-body h2 { font-size: 14.5px; }
+  body .settings-card-body>p { font-size: 13px; }
+  body .settings-label { font-size: 12.5px; }
+  body .provider-box strong { font-size: 13px; }
+  body .provider-box span { font-size: 12.5px; }
+  body .provider-box small { font-size: 12px; }
+  body .settings-footnote { font-size: 12.5px; }
+  body .toast { font-size: 13px; }
+  body .loading-state { font-size: 13.5px; }
+  body .fatal-state { font-size: 13.5px; }
+  body .dialog-actions .btn-primary { font-size: 12.5px; }
+  body .dialog-actions .btn-secondary { font-size: 12.5px; }
+  body .field-hint { font-size: 12px; }
+  body .range-switch button { font-size: 12px; }
+  body .report-metric>span:nth-child(2) { font-size: 12px; }
+  body .report-metric small { font-size: 12px; }
+  body .report-subtitle { font-size: 12px; }
+  body .report-bar-row>div:first-child { font-size: 12.5px; }
+  body .report-bar-row>div:first-child strong { font-size: 12.5px; }
+  body .report-badge { font-size: 12px; }
+  body .incubation-report-row span { font-size: 12px; }
+  body .report-note { font-size: 12px; }
+  body .report-stock-row { font-size: 12.5px; }
+  body .report-stock-row strong { font-size: 12.5px; }
+  body .report-stock-row small { font-size: 11.5px; }
+  body .report-disclaimer { font-size: 12px; }
+  body .report-metric strong { font-size: 14.5px; }
+  body .chart-total .posture-rate span { font-size: 12px; }
+  body .chart-total .posture-rate small { font-size: 11.5px; }
+  body .report-filters label { font-size: 12px; }
+  body .report-filters select { font-size: 12.5px; }
+  body .demo-content-banner { font-size: 13px; }
+  body .trace-list-row strong { font-size: 14.5px; }
+  body .trace-list-row span { font-size: 14px; }
+  body .subsection-heading { font-size: 15.5px; }
+  body .trace-code-chips button { font-size: 13.5px; }
+  body .trace-node-number { font-size: 14px; }
+  body .trace-node h3 { font-size: 15px; }
+  body .trace-node strong { font-size: 14.5px; }
+  body .trace-node p { font-size: 14px; }
+  body .trace-link-caption { font-size: 13px; }
+  body .trace-disclaimer { font-size: 14px; }
+  body .trace-note { font-size: 14px; }
+  body .trace-overview p { font-size: 14px; }
+  body .trace-code-grid button strong { font-size: 13.5px; }
+  body .trace-code-grid button span { font-size: 13.5px; }
+  body .code-link { font-size: 13.5px; }
+  body .global-trace-search input { font-size: 14px; }
+  body .lot-create>p { font-size: 14px; }
+  body .lot-status { font-size: 13px; }
+  body .sale-totals span { font-size: 13.5px; }
+  body .sale-totals strong { font-size: 15px; }
+  body .sales-filters select { font-size: 14px; }
+  body .sales-filters input { font-size: 14px; }
+  body .sale-actions button { font-size: 13.5px; }
+  body .catalog-list span { font-size: 13.5px; }
+  body .receipt-head h2 { font-size: 15.5px; }
+  body .receipt-head p { font-size: 13px; }
+  body .receipt-codes small { font-size: 12.5px; }
+  body .receipt-codes strong { font-size: 14px; }
+  body .receipt-meta { font-size: 13.5px; }
+  body .receipt-lines { font-size: 12.5px; }
+  body .receipt-lines td small { font-size: 12.5px; }
+  body .receipt-trace { font-size: 12.5px; }
+  body .receipt-summary span { font-size: 13.5px; }
+  body .receipt-summary .receipt-total { font-size: 15.5px; }
+  body .receipt-notes { font-size: 13px; }
+  body .receipt-footer { font-size: 13px; }
+  body .receipt-paper { font-size: 12.5px; }
+  body .family-tree-title { font-size: 13.5px; }
+  body .family-tree-title strong { font-size: 15px; }
+  body .family-branch h4 { font-size: 13px; }
+  body .family-ribbon { font-size: 12px; }
+  body .family-card>strong { font-size: 13.5px; }
+  body .family-card>small { font-size: 12px; }
+  body .family-card .family-code { font-size: 11.5px; }
+  body .family-generation-label { font-size: 12.5px; }
+  body .family-no-descendants { font-size: 13px; }
+  body .auth-brand small { font-size: 14px; }
+  body .auth-card>.eyebrow { font-size: 13px; }
+  body .auth-card>p { font-size: 15px; }
+  body .auth-privacy { font-size: 13.5px; }
+  body .auth-error { font-size: 14.5px; }
+  body .logout-button { font-size: 13.5px; }
+  body .genealogy-banner>p { font-size: 14px; }
+  body .genealogy-panel>.panel-heading>div>p { font-size: 14px; }
+  body .genealogy-generation-label { font-size: 13px; }
+  body .genealogy-person strong { font-size: 14px; }
+  body .genealogy-person small { font-size: 13px; }
+  body .genealogy-selected>.eyebrow { font-size: 13px; }
+  body .genealogy-empty { font-size: 13.5px; }
+  body .genealogy-births { font-size: 13.5px; }
+  body .genealogy-births strong { font-size: 14px; }
+  body .bird-id-heading p { font-size: 14.5px; }
+  body .bird-id-section-title p { font-size: 14px; }
+  body .camera-placeholder>small { font-size: 13.5px; }
+  body .bird-inline-error { font-size: 14px; }
+  body .bird-ocr-status { font-size: 14px; }
+  body .bird-id-message { font-size: 14px; }
+  body .bird-candidate-confirm { font-size: 14px; }
+  body .bird-candidates { font-size: 14px; }
+  body .text-action { font-size: 14px; }
+  body .bird-unregistered-actions h3 { font-size: 15px; }
+  body .bird-register-heading strong { font-size: 15px; }
+  body .bird-upload-preview small { font-size: 13.5px; }
+  body .ring-legend { font-size: 13px; }
+  body .ring-number { font-size: 12.5px; }
+  body .bird-profile-identity>div>span:last-child { font-size: 14px; }
+  body .bird-status-pill { font-size: 13px; }
+  body .bird-profile-facts small { font-size: 13px; }
+  body .bird-profile-facts strong { font-size: 14px; }
+  body .bird-profile-columns h3 { font-size: 15px; }
+  body .bird-event-area h3 { font-size: 15px; }
+  body .bird-linked-list strong { font-size: 13.5px; }
+  body .bird-linked-list small { font-size: 13px; }
+  body .bird-linked-list p { font-size: 13px; }
+  body .bird-event-area>div>p { font-size: 13.5px; }
+  body .market-filters select { font-size: 14px; }
+  body .market-filters input[type=number] { font-size: 14px; }
+  body .notif-filters select { font-size: 14px; }
+  body .market-count { font-size: 14px; }
+  body .market-card-head .status-pill { font-size: 13px; }
+  body .market-meta { font-size: 14px; }
+  body .market-meta-soft { font-size: 13.5px; }
+  body .market-price-soft { font-size: 14.5px; }
+  body .market-detail h3 { font-size: 14.5px; }
+  body .market-detail p { font-size: 14.5px; }
+  body .market-facts dt { font-size: 13px; }
+  body .market-facts dd { font-size: 14.5px; }
+  body .market-lineage li { font-size: 14.5px; }
+  body .market-lineage li>span { font-size: 13px; }
+  body .market-tabs button { font-size: 14px; }
+  body .market-row-main strong { font-size: 15.5px; }
+  body .market-pills .status-pill { font-size: 13px; }
+  body .market-row-actions .btn-primary { font-size: 14px; }
+  body .market-row-actions .btn-secondary { font-size: 14px; }
+  body .market-interests { font-size: 14.5px; }
+  body .market-preview ul { font-size: 14.5px; }
+  body .market-consents { font-size: 14.5px; }
+  body .market-consents label { font-size: 14.5px; }
+  body .market-accept { font-size: 14.5px; }
+  body .pref-toggle { font-size: 14.5px; }
+  body .bell-count { font-size: 13px; }
+  body .notif-body strong { font-size: 15px; }
+  body .notif-body span { font-size: 14.5px; }
+  body .notif-body small { font-size: 13.5px; }
+  body .profile-card p { font-size: 14.5px; }
+  body .channel-list small { font-size: 13.5px; }
+  body .market-price-block small { font-size: 13.5px; }
+  body .bid-history li { font-size: 14.5px; }
+  body .bid-history small { font-size: 13.5px; }
+  body .op-hint { font-size: 14px; }
+  body .op-history { font-size: 14px; }
+  body .conversation-empty { font-size: 14px; }
+  body .bubble p { font-size: 14.5px; }
+  body .bubble small { font-size: 13px; }
+  body .conversation-form textarea { font-size: 14.5px; }
+  body .receipt-hash { font-size: 13.5px; }
+  body .channel-extra p { font-size: 14px; }
+  body .insight-grid .report-metric span { font-size: 14px; }
+  body .insight-grid .report-metric small { font-size: 13.5px; }
+  body .link-button { font-size: 13px; }
+  body .publish-types button small { font-size: 13.5px; }
+  body .publish-birds legend { font-size: 14.5px; }
+  body .publish-bird-list label { font-size: 14.5px; }
+  body .photo-picker-item figcaption { font-size: 13px; }
+  body .photo-picker-add { font-size: 14px; }
+  body .market-photo-count { font-size: 13.5px; }
+  body .market-type-badge { font-size: 13px; }
+  body .market-card-seller { font-size: 14px; }
+  body .lot-birds { font-size: 14.5px; }
+  body .lot-birds th { font-size: 13.5px; }
+  body .invoice-table { font-size: 14.5px; }
+  body .invoice-table th { font-size: 13.5px; }
+  body .invoice-table td small { font-size: 13.5px; }
+  body .pos-ticket { font-size: 14px; }
+  body .pos-ticket h1 { font-size: 14.5px; }
+  body .pos-grand { font-size: 15px; }
+  body .pos-hash { font-size: 13px; }
+  body .pos-footer { font-size: 13px; }
+  body .seller-social-stats small { font-size: 13.5px; }
+  body .seller-bars div { font-size: 13.5px; }
+  body .popover-panel footer .text-link { font-size: 14px; }
+  body .popover-panel .text-link { font-size: 13.5px; }
+  body .popover-tabs button { font-size: 14px; }
+  body .popover-text strong { font-size: 14.5px; }
+  body .popover-text>span { font-size: 14px; }
+  body .popover-text small { font-size: 13.5px; }
+  body .popover-empty { font-size: 14px; }
+  body .chat-title strong { font-size: 14.5px; }
+  body .alert-text strong { font-size: 14.5px; }
+  body .alert-text>span { font-size: 14px; }
+  body .alert-text small { font-size: 13.5px; }
+  body .mini-dialog-text { font-size: 14.5px; }
+  body .mini-dialog .form-field span { font-size: 14px; }
+  body .mini-dialog .form-field input { font-size: 15px; }
+  body .mini-dialog .form-field textarea { font-size: 15px; }
+  body .mini-dialog-hint { font-size: 13.5px; }
+  body .mini-chips button { font-size: 14px; }
+  body .btn-danger { font-size: 13px; }
+  body .app-toast { font-size: 14.5px; }
+  body .chat-peer { font-size: 13.5px; }
+  body .post-composer textarea { font-size: 15px; }
+  body .post-edit textarea { font-size: 15px; }
+  body .attach-meta { font-size: 13px; }
+  body .attach-err { font-size: 13px; }
+  body .post-head strong { font-size: 15px; }
+  body .post-head small { font-size: 13.5px; }
+  body .post-text { font-size: 15px; }
+  body .lightbox-stage figcaption { font-size: 14px; }
+  body .post-counts { font-size: 14px; }
+  body .post-buttons button { font-size: 14.5px; }
+  body .comment-bubble strong { font-size: 14.5px; }
+  body .comment-bubble p { font-size: 15px; }
+  body .comment-flag { font-size: 13.5px; }
+  body .comment-deleted { font-size: 14.5px; }
+  body .comment-meta { font-size: 14px; }
+  body .comment-replying { font-size: 14px; }
+  body .comment-form textarea { font-size: 15px; }
+  body .comment-form-actions small { font-size: 13.5px; }
+  body .comment-more { font-size: 14.5px; }
+  body .comments-empty { font-size: 14.5px; }
+  body .comments-login { font-size: 14.5px; }
+  body .likers-list li { font-size: 15px; }
+}
+@media (min-width: 901px) {
+  body .brand small { font-size: 11.4px; }
+  body .farm-switch small { font-size: 11.4px; }
+  body .nav-heading { font-size: 11.1px; }
+  body .nav-count { font-size: 11.4px; }
+  body .help-card strong { font-size: 11.7px; }
+  body .help-card p { font-size: 11.4px; }
+  body .profile-avatar { font-size: 11.4px; }
+  body .top-avatar { font-size: 11.4px; }
+  body .profile-row strong { font-size: 11.7px; }
+  body .profile-row small { font-size: 11.1px; }
+  body .topbar-crumb { font-size: 11.7px; }
+  body .local-badge { font-size: 11.4px; }
+  body .topbar-date { font-size: 11.7px; }
+  body .app-footer { font-size: 10.8px; }
+  body .eyebrow { font-size: 10.8px; }
+  body .welcome p { font-size: 11.4px; }
+  body .welcome-cta { font-size: 11.7px; }
+  body .demo-tag { font-size: 10.8px; }
+  body .metric-label { font-size: 11.1px; }
+  body .metric-detail { font-size: 10.7px; }
+  body .text-link { font-size: 11.4px; }
+  body .round-link { font-size: 11.4px; }
+  body .chart-total span { font-size: 11.1px; }
+  body .bar-column span { font-size: 10.8px; }
+  body .chart-legend { font-size: 11.1px; }
+  body .flock-total>span { font-size: 11.4px; }
+  body .race-row { font-size: 11.4px; }
+  body .incubation-copy>strong { font-size: 11.7px; }
+  body .incubation-copy>span { font-size: 11.1px; }
+  body .incubation-copy small { font-size: 10.8px; }
+  body .hatch-date span { font-size: 10.5px; }
+  body .hatch-date small { font-size: 10.8px; }
+  body .hatch-note { font-size: 11.1px; }
+  body .stock-copy strong { font-size: 11.4px; }
+  body .stock-copy span { font-size: 11.1px; }
+  body .stock-status { font-size: 10.8px; }
+  body .task-date span { font-size: 10.5px; }
+  body .task-copy strong { font-size: 11.4px; }
+  body .task-copy span { font-size: 10.8px; }
+  body .status-pill { font-size: 10.8px; }
+  body .alert-row p strong { font-size: 11.1px; }
+  body .alert-row p span { font-size: 10.8px; }
+  body .empty-inline { font-size: 11.4px; }
+  body .breadcrumb { font-size: 11.4px; }
+  body .module-title-row p { font-size: 11.1px; }
+  body .btn-primary { font-size: 11.4px; }
+  body .btn-secondary { font-size: 11.4px; }
+  body .module-summary>div:nth-child(2)>span { font-size: 11.1px; }
+  body .summary-aside span { font-size: 10.8px; }
+  body .summary-aside strong { font-size: 11.7px; }
+  body .search-box input { font-size: 11.4px; }
+  body .toolbar-filters select { font-size: 10.8px; }
+  body .filter-button { font-size: 10.8px; }
+  body th { font-size: 10.8px; }
+  body td { font-size: 11.1px; }
+  body .cell-title { font-size: 11.4px; }
+  body .code-text { font-size: 11.1px; }
+  body .complete-action { font-size: 10.8px; }
+  body .table-footer { font-size: 10.5px; }
+  body .empty-state p { font-size: 11.4px; }
+  body .stock-item-card>div:nth-child(2)>span { font-size: 10.8px; }
+  body .stock-item-card small { font-size: 10.8px; }
+  body .stock-item-card>div:nth-child(2)>strong { font-size: 11.4px; }
+  body .stock-amount span { font-size: 10.8px; }
+  body .inc-wide-main>div:first-child>span:last-child { font-size: 11.1px; }
+  body .inc-progress>span { font-size: 10.8px; }
+  body .genealogy-tree { font-size: 10.8px; }
+  body .genealogy-banner p { font-size: 10.8px; }
+  body .form-field { font-size: 11.1px; }
+  body .form-field input { font-size: 11.4px; }
+  body .form-field select { font-size: 11.4px; }
+  body .form-field textarea { font-size: 11.4px; }
+  body .settings-label input { font-size: 11.4px; }
+  body .form-hint { font-size: 11.1px; }
+  body .form-error { font-size: 11.1px; }
+  body .settings-card-body>p { font-size: 11.4px; }
+  body .settings-label { font-size: 11.1px; }
+  body .provider-box strong { font-size: 11.4px; }
+  body .provider-box span { font-size: 11.1px; }
+  body .provider-box small { font-size: 10.8px; }
+  body .settings-footnote { font-size: 11.1px; }
+  body .toast { font-size: 11.4px; }
+  body .loading-state { font-size: 11.7px; }
+  body .fatal-state { font-size: 11.7px; }
+  body .dialog-actions .btn-primary { font-size: 11.1px; }
+  body .dialog-actions .btn-secondary { font-size: 11.1px; }
+  body .field-hint { font-size: 10.8px; }
+  body .range-switch button { font-size: 10.8px; }
+  body .report-metric>span:nth-child(2) { font-size: 10.8px; }
+  body .report-metric small { font-size: 10.8px; }
+  body .report-subtitle { font-size: 10.8px; }
+  body .report-bar-row>div:first-child { font-size: 11.1px; }
+  body .report-bar-row>div:first-child strong { font-size: 11.1px; }
+  body .report-badge { font-size: 10.8px; }
+  body .incubation-report-row span { font-size: 10.8px; }
+  body .report-note { font-size: 10.8px; }
+  body .report-stock-row { font-size: 11.1px; }
+  body .report-stock-row strong { font-size: 11.1px; }
+  body .report-stock-row small { font-size: 10.5px; }
+  body .report-disclaimer { font-size: 10.8px; }
+  body .chart-total .posture-rate span { font-size: 10.8px; }
+  body .chart-total .posture-rate small { font-size: 10.5px; }
+  body .report-filters label { font-size: 10.8px; }
+  body .report-filters select { font-size: 11.1px; }
+  body .demo-content-banner { font-size: 11.4px; }
+  body .trace-code-chips button { font-size: 11.7px; }
+  body .trace-link-caption { font-size: 11.4px; }
+  body .trace-code-grid button strong { font-size: 11.7px; }
+  body .trace-code-grid button span { font-size: 11.7px; }
+  body .code-link { font-size: 11.7px; }
+  body .lot-status { font-size: 11.4px; }
+  body .sale-totals span { font-size: 11.7px; }
+  body .sale-actions button { font-size: 11.7px; }
+  body .catalog-list span { font-size: 11.7px; }
+  body .receipt-head p { font-size: 11.4px; }
+  body .receipt-codes small { font-size: 11.1px; }
+  body .receipt-meta { font-size: 11.7px; }
+  body .receipt-lines { font-size: 11.1px; }
+  body .receipt-lines td small { font-size: 11.1px; }
+  body .receipt-trace { font-size: 11.1px; }
+  body .receipt-summary span { font-size: 11.7px; }
+  body .receipt-notes { font-size: 11.4px; }
+  body .receipt-footer { font-size: 11.4px; }
+  body .receipt-paper { font-size: 11.1px; }
+  body .family-tree-title { font-size: 11.7px; }
+  body .family-branch h4 { font-size: 11.4px; }
+  body .family-ribbon { font-size: 10.8px; }
+  body .family-card>strong { font-size: 11.7px; }
+  body .family-card>small { font-size: 10.8px; }
+  body .family-card .family-code { font-size: 10.5px; }
+  body .family-generation-label { font-size: 11.1px; }
+  body .family-no-descendants { font-size: 11.4px; }
+  body .auth-card>.eyebrow { font-size: 11.4px; }
+  body .auth-privacy { font-size: 11.7px; }
+  body .logout-button { font-size: 11.7px; }
+  body .genealogy-generation-label { font-size: 11.4px; }
+  body .genealogy-person small { font-size: 11.4px; }
+  body .genealogy-selected>.eyebrow { font-size: 11.4px; }
+  body .genealogy-empty { font-size: 11.7px; }
+  body .genealogy-births { font-size: 11.7px; }
+  body .camera-placeholder>small { font-size: 11.7px; }
+  body .bird-upload-preview small { font-size: 11.7px; }
+  body .ring-legend { font-size: 11.4px; }
+  body .ring-number { font-size: 11.1px; }
+  body .bird-status-pill { font-size: 11.4px; }
+  body .bird-profile-facts small { font-size: 11.4px; }
+  body .bird-linked-list strong { font-size: 11.7px; }
+  body .bird-linked-list small { font-size: 11.4px; }
+  body .bird-linked-list p { font-size: 11.4px; }
+  body .bird-event-area>div>p { font-size: 11.7px; }
+  body .market-card-head .status-pill { font-size: 11.4px; }
+  body .market-meta-soft { font-size: 11.7px; }
+  body .market-facts dt { font-size: 11.4px; }
+  body .market-lineage li>span { font-size: 11.4px; }
+  body .market-pills .status-pill { font-size: 11.4px; }
+  body .bell-count { font-size: 11.4px; }
+  body .notif-body small { font-size: 11.7px; }
+  body .channel-list small { font-size: 11.7px; }
+  body .market-price-block small { font-size: 11.7px; }
+  body .bid-history small { font-size: 11.7px; }
+  body .bubble small { font-size: 11.4px; }
+  body .receipt-hash { font-size: 11.7px; }
+  body .insight-grid .report-metric small { font-size: 11.7px; }
+  body .link-button { font-size: 11.4px; }
+  body .publish-types button small { font-size: 11.7px; }
+  body .photo-picker-item figcaption { font-size: 11.4px; }
+  body .market-photo-count { font-size: 11.7px; }
+  body .market-type-badge { font-size: 11.4px; }
+  body .lot-birds th { font-size: 11.7px; }
+  body .invoice-table th { font-size: 11.7px; }
+  body .invoice-table td small { font-size: 11.7px; }
+  body .pos-hash { font-size: 11.4px; }
+  body .pos-footer { font-size: 11.4px; }
+  body .seller-social-stats small { font-size: 11.7px; }
+  body .seller-bars div { font-size: 11.7px; }
+  body .popover-panel .text-link { font-size: 11.7px; }
+  body .popover-text small { font-size: 11.7px; }
+  body .alert-text small { font-size: 11.7px; }
+  body .mini-dialog-hint { font-size: 11.7px; }
+  body .btn-danger { font-size: 11.4px; }
+  body .chat-peer { font-size: 11.7px; }
+  body .attach-meta { font-size: 11.4px; }
+  body .attach-err { font-size: 11.4px; }
+  body .post-head small { font-size: 11.7px; }
+  body .comment-flag { font-size: 11.7px; }
+  body .comment-form-actions small { font-size: 11.7px; }
+}

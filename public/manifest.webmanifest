@@ -1,0 +1,11 @@
+{
+  "name": "Pico Criollo",
+  "short_name": "Pico Criollo",
+  "description": "Gestión de granja avícola y Mercado Avícola.",
+  "start_url": "/",
+  "scope": "/",
+  "display": "standalone",
+  "background_color": "#f8f8f5",
+  "theme_color": "#45794f",
+  "lang": "es-CO"
+}

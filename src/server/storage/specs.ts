@@ -1,0 +1,36 @@
+import type { CollectionSpec } from './types.ts';
+
+// Fuente única de las tablas/colecciones. El driver file la usa para validar únicos
+// y scripts/gen-migration.ts genera de aquí el SQL de database/migrations.
+export const COLLECTIONS: CollectionSpec[] = [
+  { name: 'users', table: 'app_users', unique: [{ fields: ['email'] }], index: [] },
+  { name: 'sessions', table: 'app_sessions', unique: [], index: ['userId'] },
+  { name: 'farms', table: 'farm_data', unique: [], index: [] },
+  { name: 'follows', table: 'pc_follows', unique: [{ fields: ['followerId', 'followingId'] }], index: ['followerId', 'followingId'] },
+  { name: 'ownership', table: 'pc_bird_ownership', unique: [], index: ['ownerId'] },
+  { name: 'ownershipHistory', table: 'pc_ownership_history', unique: [], index: ['birdId'] },
+  { name: 'listings', table: 'pc_listings', unique: [], index: ['sellerId', 'birdId', 'status'] },
+  { name: 'locks', table: 'pc_bird_locks', unique: [{ fields: ['birdId'], where: { status: 'active' } }], index: ['listingId', 'operationId', 'lotId'] },
+  { name: 'interests', table: 'pc_interests', unique: [{ fields: ['listingId', 'userId'] }], index: ['userId'] },
+  { name: 'bids', table: 'pc_bids', unique: [{ fields: ['listingId', 'bidderId', 'idempotencyKey'] }], index: ['listingId', 'bidderId'] },
+  { name: 'operations', table: 'pc_operations', unique: [], index: ['listingId', 'sellerId', 'buyerId', 'status'] },
+  { name: 'threads', table: 'pc_threads', unique: [], index: ['listingId', 'operationId'] },
+  { name: 'messages', table: 'pc_messages', unique: [], index: ['threadId'] },
+  { name: 'passports', table: 'pc_passports', unique: [{ fields: ['birdId'] }], index: [] },
+  { name: 'receipts', table: 'pc_transfer_receipts', unique: [{ fields: ['code'] }, { fields: ['operationId'] }], index: ['birdId', 'sellerId', 'buyerId'] },
+  { name: 'ratings', table: 'pc_ratings', unique: [{ fields: ['operationId', 'raterId'] }], index: ['rateeId'] },
+  { name: 'invoices', table: 'pc_invoices', unique: [{ fields: ['number'] }, { fields: ['operationId'] }], index: ['sellerId', 'buyerId'] },
+  { name: 'posts', table: 'pc_posts', unique: [], index: ['authorId'] },
+  { name: 'mediaItems', table: 'pc_media_items', unique: [], index: ['ownerId', 'postId'] },
+  { name: 'reelInterests', table: 'pc_reel_interests', unique: [], index: [] },
+  { name: 'postLikes', table: 'pc_post_likes', unique: [{ fields: ['postId', 'userId'] }], index: ['postId', 'userId'] },
+  { name: 'postComments', table: 'pc_post_comments', unique: [], index: ['postId', 'parentId', 'authorId'] },
+  { name: 'reports', table: 'pc_reports', unique: [], index: ['status', 'targetId'] },
+  { name: 'notifications', table: 'pc_notifications', unique: [{ fields: ['userId', 'dedupeKey'] }], index: ['userId'] },
+  { name: 'outbox', table: 'pc_outbox', unique: [{ fields: ['dedupeKey'] }], index: ['status'] },
+  { name: 'deliveries', table: 'pc_deliveries', unique: [{ fields: ['notificationId', 'channel'] }], index: ['status', 'userId'] },
+  { name: 'preferences', table: 'pc_preferences', unique: [], index: [] },
+  { name: 'pushSubscriptions', table: 'pc_push_subscriptions', unique: [{ fields: ['endpoint'] }], index: ['userId'] },
+  { name: 'audit', table: 'pc_audit_log', unique: [], index: ['actorId', 'targetId'] },
+  { name: 'passwordResets', table: 'pc_password_resets', unique: [], index: ['userId'] },
+];

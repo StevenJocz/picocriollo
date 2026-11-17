@@ -1,0 +1,478 @@
+{
+  "posts": 16,
+  "birds": 10,
+  "files": {
+    "post-01.jpg": {
+      "width": 720,
+      "height": 960
+    },
+    "post-02.jpg": {
+      "width": 720,
+      "height": 720
+    },
+    "post-03.jpg": {
+      "width": 720,
+      "height": 720
+    },
+    "post-04.jpg": {
+      "width": 720,
+      "height": 720
+    },
+    "post-05.jpg": {
+      "width": 720,
+      "height": 880
+    },
+    "post-06.jpg": {
+      "width": 720,
+      "height": 720
+    },
+    "post-07.jpg": {
+      "width": 720,
+      "height": 720
+    },
+    "post-08.jpg": {
+      "width": 720,
+      "height": 720
+    },
+    "post-09.jpg": {
+      "width": 720,
+      "height": 720
+    },
+    "post-10.jpg": {
+      "width": 720,
+      "height": 720
+    },
+    "post-11.jpg": {
+      "width": 640,
+      "height": 640
+    },
+    "post-12.jpg": {
+      "width": 640,
+      "height": 640
+    },
+    "post-13.jpg": {
+      "width": 640,
+      "height": 640
+    },
+    "post-14.jpg": {
+      "width": 640,
+      "height": 640
+    },
+    "post-15.jpg": {
+      "width": 640,
+      "height": 640
+    },
+    "post-16.jpg": {
+      "width": 640,
+      "height": 640
+    },
+    "bird-01.jpg": {
+      "width": 640,
+      "height": 640
+    },
+    "bird-02.jpg": {
+      "width": 640,
+      "height": 640
+    },
+    "bird-03.jpg": {
+      "width": 640,
+      "height": 640
+    },
+    "bird-04.jpg": {
+      "width": 640,
+      "height": 640
+    },
+    "bird-05.jpg": {
+      "width": 640,
+      "height": 640
+    },
+    "bird-06.jpg": {
+      "width": 640,
+      "height": 640
+    },
+    "bird-07.jpg": {
+      "width": 640,
+      "height": 640
+    },
+    "bird-08.jpg": {
+      "width": 640,
+      "height": 640
+    },
+    "bird-09.jpg": {
+      "width": 640,
+      "height": 640
+    },
+    "bird-10.jpg": {
+      "width": 640,
+      "height": 640
+    },
+    "avatar-guayacanes.jpg": {
+      "width": 320,
+      "height": 320
+    },
+    "avatar-alba.jpg": {
+      "width": 320,
+      "height": 320
+    },
+    "avatar-rosa.jpg": {
+      "width": 320,
+      "height": 320
+    },
+    "avatar-sanisidro.jpg": {
+      "width": 320,
+      "height": 320
+    },
+    "avatar-aurora.jpg": {
+      "width": 320,
+      "height": 320
+    },
+    "avatar-villanora.jpg": {
+      "width": 320,
+      "height": 320
+    },
+    "avatar-paramo.jpg": {
+      "width": 320,
+      "height": 320
+    },
+    "avatar-evelio.jpg": {
+      "width": 320,
+      "height": 320
+    },
+    "avatar-ceiba.jpg": {
+      "width": 320,
+      "height": 320
+    },
+    "avatar-paraiso.jpg": {
+      "width": 320,
+      "height": 320
+    },
+    "avatar-robles.jpg": {
+      "width": 320,
+      "height": 320
+    },
+    "avatar-esperanza.jpg": {
+      "width": 320,
+      "height": 320
+    },
+    "avatar-pradera.jpg": {
+      "width": 320,
+      "height": 320
+    },
+    "avatar-milplumas.jpg": {
+      "width": 320,
+      "height": 320
+    },
+    "avatar-mirador.jpg": {
+      "width": 320,
+      "height": 320
+    },
+    "avatar-marta.jpg": {
+      "width": 320,
+      "height": 320
+    },
+    "avatar-camino.jpg": {
+      "width": 320,
+      "height": 320
+    },
+    "avatar-margaritas.jpg": {
+      "width": 320,
+      "height": 320
+    },
+    "avatar-cantaclaro.jpg": {
+      "width": 320,
+      "height": 320
+    },
+    "avatar-nogales.jpg": {
+      "width": 320,
+      "height": 320
+    },
+    "avatar-sol.jpg": {
+      "width": 320,
+      "height": 320
+    },
+    "avatar-villaesperanza.jpg": {
+      "width": 320,
+      "height": 320
+    },
+    "avatar-palmas.jpg": {
+      "width": 320,
+      "height": 320
+    },
+    "avatar-sanjorge.jpg": {
+      "width": 320,
+      "height": 320
+    },
+    "huevos-fertiles-1.jpg": {
+      "width": 600,
+      "height": 800
+    },
+    "huevos-fertiles-1-s.jpg": {
+      "width": 420,
+      "height": 560
+    },
+    "huevos-fertiles-2.jpg": {
+      "width": 800,
+      "height": 533
+    },
+    "huevos-fertiles-2-s.jpg": {
+      "width": 560,
+      "height": 373
+    },
+    "insumo-cuido-1.jpg": {
+      "width": 800,
+      "height": 533
+    },
+    "insumo-cuido-1-s.jpg": {
+      "width": 560,
+      "height": 373
+    },
+    "insumo-cuido-2.jpg": {
+      "width": 800,
+      "height": 533
+    },
+    "insumo-cuido-2-s.jpg": {
+      "width": 560,
+      "height": 373
+    },
+    "insumo-equipos-1.jpg": {
+      "width": 800,
+      "height": 533
+    },
+    "insumo-equipos-1-s.jpg": {
+      "width": 560,
+      "height": 373
+    },
+    "insumo-equipos-2.jpg": {
+      "width": 533,
+      "height": 800
+    },
+    "insumo-equipos-2-s.jpg": {
+      "width": 373,
+      "height": 560
+    },
+    "insumo-incubadora.jpg": {
+      "width": 800,
+      "height": 450
+    },
+    "insumo-incubadora-s.jpg": {
+      "width": 560,
+      "height": 315
+    },
+    "insumo-maiz-1.jpg": {
+      "width": 800,
+      "height": 533
+    },
+    "insumo-maiz-1-s.jpg": {
+      "width": 560,
+      "height": 373
+    },
+    "insumo-maiz-2.jpg": {
+      "width": 800,
+      "height": 533
+    },
+    "insumo-maiz-2-s.jpg": {
+      "width": 560,
+      "height": 373
+    },
+    "raza-araucana-1.jpg": {
+      "width": 533,
+      "height": 800
+    },
+    "raza-araucana-1-s.jpg": {
+      "width": 373,
+      "height": 560
+    },
+    "raza-araucana-2.jpg": {
+      "width": 800,
+      "height": 533
+    },
+    "raza-araucana-2-s.jpg": {
+      "width": 560,
+      "height": 373
+    },
+    "raza-brahma-gallina.jpg": {
+      "width": 800,
+      "height": 533
+    },
+    "raza-brahma-gallina-s.jpg": {
+      "width": 560,
+      "height": 373
+    },
+    "raza-brahma-gallo.jpg": {
+      "width": 600,
+      "height": 800
+    },
+    "raza-brahma-gallo-s.jpg": {
+      "width": 420,
+      "height": 560
+    },
+    "raza-cochin-1.jpg": {
+      "width": 800,
+      "height": 533
+    },
+    "raza-cochin-1-s.jpg": {
+      "width": 560,
+      "height": 373
+    },
+    "raza-cochin-gallo.jpg": {
+      "width": 800,
+      "height": 533
+    },
+    "raza-cochin-gallo-s.jpg": {
+      "width": 560,
+      "height": 373
+    },
+    "raza-leghorn-1.jpg": {
+      "width": 800,
+      "height": 800
+    },
+    "raza-leghorn-1-s.jpg": {
+      "width": 560,
+      "height": 560
+    },
+    "raza-leghorn-gallo.jpg": {
+      "width": 800,
+      "height": 533
+    },
+    "raza-leghorn-gallo-s.jpg": {
+      "width": 560,
+      "height": 373
+    },
+    "raza-marans-gallo.jpg": {
+      "width": 800,
+      "height": 512
+    },
+    "raza-marans-gallo-s.jpg": {
+      "width": 560,
+      "height": 358
+    },
+    "raza-negra-1.jpg": {
+      "width": 800,
+      "height": 533
+    },
+    "raza-negra-1-s.jpg": {
+      "width": 560,
+      "height": 373
+    },
+    "raza-negra-2.jpg": {
+      "width": 800,
+      "height": 535
+    },
+    "raza-negra-2-s.jpg": {
+      "width": 560,
+      "height": 375
+    },
+    "raza-orpington-1.jpg": {
+      "width": 560,
+      "height": 800
+    },
+    "raza-orpington-1-s.jpg": {
+      "width": 392,
+      "height": 560
+    },
+    "raza-orpington-2.jpg": {
+      "width": 708,
+      "height": 800
+    },
+    "raza-orpington-2-s.jpg": {
+      "width": 496,
+      "height": 560
+    },
+    "raza-orpington-gallo.jpg": {
+      "width": 696,
+      "height": 800
+    },
+    "raza-orpington-gallo-s.jpg": {
+      "width": 487,
+      "height": 560
+    },
+    "raza-plymouth-1.jpg": {
+      "width": 800,
+      "height": 640
+    },
+    "raza-plymouth-1-s.jpg": {
+      "width": 560,
+      "height": 448
+    },
+    "raza-plymouth-2.jpg": {
+      "width": 800,
+      "height": 533
+    },
+    "raza-plymouth-2-s.jpg": {
+      "width": 560,
+      "height": 373
+    },
+    "raza-rhode-1.jpg": {
+      "width": 503,
+      "height": 800
+    },
+    "raza-rhode-1-s.jpg": {
+      "width": 352,
+      "height": 560
+    },
+    "raza-rhode-2.jpg": {
+      "width": 800,
+      "height": 529
+    },
+    "raza-rhode-2-s.jpg": {
+      "width": 560,
+      "height": 370
+    },
+    "raza-rhode-gallo.jpg": {
+      "width": 800,
+      "height": 800
+    },
+    "raza-rhode-gallo-s.jpg": {
+      "width": 560,
+      "height": 560
+    },
+    "raza-sedosa-1.jpg": {
+      "width": 600,
+      "height": 800
+    },
+    "raza-sedosa-1-s.jpg": {
+      "width": 420,
+      "height": 560
+    },
+    "raza-sedosa-2.jpg": {
+      "width": 800,
+      "height": 533
+    },
+    "raza-sedosa-2-s.jpg": {
+      "width": 560,
+      "height": 373
+    },
+    "raza-sedosa-pollitos.jpg": {
+      "width": 800,
+      "height": 515
+    },
+    "raza-sedosa-pollitos-s.jpg": {
+      "width": 560,
+      "height": 361
+    },
+    "raza-sussex.jpg": {
+      "width": 800,
+      "height": 621
+    },
+    "raza-sussex-s.jpg": {
+      "width": 560,
+      "height": 435
+    },
+    "raza-wyandotte-1.jpg": {
+      "width": 800,
+      "height": 533
+    },
+    "raza-wyandotte-1-s.jpg": {
+      "width": 560,
+      "height": 373
+    },
+    "raza-wyandotte-2.jpg": {
+      "width": 800,
+      "height": 600
+    },
+    "raza-wyandotte-2-s.jpg": {
+      "width": 560,
+      "height": 420
+    }
+  }
+}

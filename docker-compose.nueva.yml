@@ -1,0 +1,65 @@
+# La pila nueva: la API .NET y la app web (Expo). Convive con la app Next.js (docker-compose.yml) sobre la misma base de datos
+# hasta que se haga el corte (docs/CORTE.md). No toca los volúmenes ni la base: solo agrega estos dos contenedores.
+#
+#   docker compose -f docker-compose.nueva.yml --env-file .env.api build
+#   docker compose -f docker-compose.nueva.yml --env-file .env.api up -d
+#
+# Variables en .env.api (ver .env.api.example). Los dos servicios se publican por el proxy (Nginx Proxy Manager / Cloudflare Tunnel):
+#   api -> contenedor pico-criollo-api, puerto 8080      web -> contenedor pico-criollo-web, puerto 8080
+services:
+  pico-criollo-api:
+    build:
+      context: ./api
+      dockerfile: Dockerfile
+    container_name: pico-criollo-api
+    volumes:
+      - pico_media_jobs:/app/media-jobs
+    restart: unless-stopped
+    environment:
+      ASPNETCORE_ENVIRONMENT: Production
+      ConnectionStrings__Conexion: "Host=${PGHOST:-postgres};Port=${PGPORT:-5432};Database=${PGDATABASE:-bdpicocriollo};Username=${PGUSER:-postgres};Password=${PGPASSWORD};Maximum Pool Size=${PGPOOL:-10}"
+      Jwt__Key: ${JWT_KEY}
+      App__Origen: ${APP_ORIGEN}
+      Web__Origenes__0: ${APP_ORIGEN}
+      Smtp__Host: ${SMTP_HOST:-}
+      Smtp__Puerto: ${SMTP_PUERTO:-587}
+      Smtp__Usuario: ${SMTP_USUARIO:-}
+      Smtp__Clave: ${SMTP_CLAVE:-}
+      Smtp__Desde: ${SMTP_DESDE:-}
+      Expo__AccessToken: ${EXPO_ACCESS_TOKEN:-}
+      OpenApi__Publicar: ${OPENAPI_PUBLICAR:-false}
+    expose:
+      - "8080"
+    networks:
+      - backend
+    healthcheck:
+      # La imagen de ASP.NET no trae curl: se pide /api/health con bash.
+      test: ["CMD", "bash", "-c", "exec 3<>/dev/tcp/127.0.0.1/8080 && printf 'GET /api/health HTTP/1.0\\r\\n\\r\\n' >&3 && head -n1 <&3 | grep -q ' 200 '"]
+      interval: 30s
+      timeout: 5s
+      retries: 5
+      start_period: 30s
+
+  pico-criollo-web:
+    build:
+      context: ./mobile
+      dockerfile: Dockerfile
+      args:
+        EXPO_PUBLIC_API_URL: ${API_URL_PUBLICA}
+    container_name: pico-criollo-web
+    restart: unless-stopped
+    depends_on:
+      pico-criollo-api:
+        condition: service_healthy
+    expose:
+      - "8080"
+    networks:
+      - backend
+
+volumes:
+  pico_media_jobs:
+
+networks:
+  backend:
+    external: true
+    name: backend

@@ -1,0 +1,15 @@
+'use client';
+import { useEffect } from 'react';
+import type { RefObject } from 'react';
+
+/** Cierra un panel flotante al hacer clic fuera de él o al pulsar Escape. */
+export function useDismiss(open: boolean, ref: RefObject<HTMLElement | null>, onClose: () => void) {
+  useEffect(() => {
+    if (!open) return;
+    const onPointer = (event: MouseEvent) => { if (ref.current && !ref.current.contains(event.target as Node)) onClose(); };
+    const onKey = (event: KeyboardEvent) => { if (event.key === 'Escape') onClose(); };
+    document.addEventListener('mousedown', onPointer);
+    document.addEventListener('keydown', onKey);
+    return () => { document.removeEventListener('mousedown', onPointer); document.removeEventListener('keydown', onKey); };
+  }, [open, ref, onClose]);
+}

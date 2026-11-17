@@ -1,0 +1,85 @@
+# Learn more https://docs.github.com/en/get-started/getting-started-with-git/ignoring-files
+
+# dependencies
+node_modules/
+
+# Expo
+.expo/
+dist/
+web-build/
+expo-env.d.ts
+
+# Native
+.kotlin/
+*.orig.*
+*.jks
+*.p8
+*.p12
+*.key
+*.mobileprovision
+
+# Metro
+.metro-health-check*
+
+# debug
+npm-debug.*
+yarn-debug.*
+yarn-error.*
+
+# macOS
+.DS_Store
+*.pem
+
+# local env files
+.env
+.env.*
+!.env.example
+!.env.api.example
+server/.env
+server/.env.*
+!server/.env.example
+.env*.local
+
+# typescript
+*.tsbuildinfo
+
+# .NET
+**/bin/
+**/obj/
+TestResults/
+*.trx
+coverage/
+
+# IDE y sistema operativo
+.vs/
+.vscode/
+.idea/
+
+# Python
+__pycache__/
+*.py[cod]
+.pytest_cache/
+
+# generated native folders
+/ios
+/android
+
+# Next.js
+.next/
+.next-deploy/
+.vercel/
+
+# Herramientas locales y paquetes de despliegue
+.claude/
+*.tgz
+*.tar.gz
+*.b64
+*.dump
+*.bak
+
+# Plantillas públicas de configuración
+!.env.production.example
+
+
+# Datos locales del driver de archivo
+.data/

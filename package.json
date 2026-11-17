@@ -1,0 +1,38 @@
+{
+  "name": "pico-criollo",
+  "version": "2.0.0",
+  "private": true,
+  "scripts": {
+    "dev": "next dev --hostname 127.0.0.1",
+    "build": "next build",
+    "start": "next start --hostname 0.0.0.0",
+    "lint": "eslint src",
+    "typecheck": "tsc --noEmit",
+    "test": "node --experimental-strip-types --test tests/*.test.ts",
+    "db:migration": "node --experimental-strip-types scripts/gen-migration.ts",
+    "css:mobile": "node --experimental-strip-types scripts/gen-mobile-type.ts",
+    "seed:images": "node --experimental-strip-types scripts/gen-seed-images.ts",
+    "seed:sql": "node --experimental-strip-types scripts/export-seed-sql.ts"
+  },
+  "dependencies": {
+    "lucide-react": "1.59.0",
+    "next": "^16.0.0",
+    "nodemailer": "^10.1.1",
+    "pg": "^8.23.1",
+    "react": "^19.2.0",
+    "react-dom": "^19.2.0",
+    "tesseract.js": "^7.0.0",
+    "web-push": "^3.6.7"
+  },
+  "devDependencies": {
+    "@types/node": "^22.0.0",
+    "@types/nodemailer": "^8.0.2",
+    "@types/pg": "^8.23.1",
+    "@types/react": "^19.0.0",
+    "@types/react-dom": "^19.0.0",
+    "@types/web-push": "^3.6.4",
+    "eslint": "^9.0.0",
+    "eslint-config-next": "^16.0.0",
+    "typescript": "^5.7.0"
+  }
+}
